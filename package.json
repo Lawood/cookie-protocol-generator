@@ -24,13 +24,9 @@
     "url": "https://github.com/Lawood/cookie-protocol-generator/issues"
   },
   "homepage": "https://github.com/Lawood/cookie-protocol-generator#readme",
-<<<<<<< HEAD
-  "dependencies": {
-    "child_process": "^1.0.2"
-=======
   "devDependencies": {
+    "@types/node": "^9.6.6",
     "tslint": "^5.0.0-dev.0",
     "typescript": "^2.9.0-dev.20180424"
->>>>>>> f32d7369d830bd483dac50a9726a959483eeb4a3
   }
 }
