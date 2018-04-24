@@ -6,18 +6,16 @@ const selected = [
   'com.ankamagames.jerakine.network.++',
 ].join(',');
 
-const cmd = spawn('java', `-jar ffdec.jar -selectclass ${selected} -export script ./output/ DofusInvoker.swf`.split(' '));
+const args = [
+  '-jar', 'ffdec.jar',
+  '-selectclass', selected,
+  '-export', 'script', './output/', 'DofusInvoker.swf',
+];
 
-// const cmd = spawn('ls', ['-lh', '/usr']);
+const cmd = spawn('java', args);
 
-cmd.stdout.on('data', (chunk) => {
-  console.log(`stdout: ${chunk}`);
-});
+cmd.stdout.on('data', (chunk) => console.log(chunk.toString()));
 
-cmd.stderr.on('data', (chunk) => {
-  console.log(`stderr: ${chunk}`);
-});
+cmd.stderr.on('data', (chunk) => console.log(`Error: ${chunk.toString()}`));
 
-cmd.on('close', (code, signal) => {
-  console.log(`child process exited with code ${code}`);
-});
+cmd.on('close', (code, signal) => console.log(`child process exited with code ${code}`));

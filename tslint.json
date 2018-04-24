@@ -6,10 +6,6 @@
     "rules": {
         "eofline": true,
         "no-console": false,
-        "max-line-length": [
-          true,
-          150
-        ],
         "indent": [
             true,
             "spaces",
