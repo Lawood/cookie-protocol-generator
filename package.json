@@ -5,17 +5,27 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node dist/index.js",
-    "dev": "tsc && node dist/index.js"
+    "start": "node .",
+    "build": "tsc",
+    "dev": "npm run build && npm start",
+    "lint": "tslint --project . -t stylish",
+    "lint:fix": "tslint --project . -t stylish --fix"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Lawood/cookie-protocol-generator.git"
   },
   "author": "",
+  "contributors": [
+    "Christopher Yovanovitch <yovano_c@outlook.com>"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Lawood/cookie-protocol-generator/issues"
   },
-  "homepage": "https://github.com/Lawood/cookie-protocol-generator#readme"
+  "homepage": "https://github.com/Lawood/cookie-protocol-generator#readme",
+  "devDependencies": {
+    "tslint": "^5.0.0-dev.0",
+    "typescript": "^2.9.0-dev.20180424"
+  }
 }
