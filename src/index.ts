@@ -1,5 +1,17 @@
-import * as child_process from 'child_process';
+import { spawn } from 'child_process';
 
-const ls = child_process.execSync('ls');
+const cmd = spawn('java', '-jar ffdec.jar -export script ./output/ DofusInvoker.swf'.split(' '));
 
-console.log(ls.toString());
+// const cmd = spawn('ls', ['-lh', '/usr']);
+
+cmd.stdout.on('data', (chunk) => {
+  console.log(`stdout: ${chunk}`);
+});
+
+cmd.stderr.on('data', (chunk) => {
+  console.log(`stderr: ${chunk}`);
+});
+
+cmd.on('close', (code, signal) => {
+  console.log(`child process exited with code ${code}`);
+});
