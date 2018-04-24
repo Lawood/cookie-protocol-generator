@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as child_process from "typed-child_process";
 
 const ls = child_process('ls', ['-lh', '/usr']);
@@ -12,3 +13,6 @@ ls.stderr.on('data', (data:any) => {
 ls.on('close', (code:any) => {
   console.log(`child process exited with code ${code}`);
 });
+=======
+console.log('test');
+>>>>>>> f32d7369d830bd483dac50a9726a959483eeb4a3
