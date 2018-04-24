@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Lawood/cookie-protocol-generator/issues"
   },
-  "homepage": "https://github.com/Lawood/cookie-protocol-generator#readme"
+  "homepage": "https://github.com/Lawood/cookie-protocol-generator#readme",
+  "dependencies": {
+    "child_process": "^1.0.2"
+  }
 }
